@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/vendor/normalize.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/cendor/mui.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/nucleus.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/vendor/css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/vendor/css/mui.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/nucleus.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/styles.css') }}">
     <title>
         {{ title }}
     </title>
@@ -86,7 +86,6 @@
        
     </div>
     <script src="{{ url_for('static', filename='js/particle-network.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/three.js') }}"></script>
     {% block javascript %}
         <script
             src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -261,7 +260,7 @@
     {% endblock %}
     <!--<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>-->
     <!--<script src="{{ url_for('static', filename='js/main-node.js') }}"></script>-->
-    <script src="{{ url_for('static', filename='js/mui.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='../static/vendor/js/mui.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='../static/js/scripts.js') }}"></script>
 </body>
 </html>

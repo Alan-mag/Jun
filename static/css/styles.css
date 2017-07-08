@@ -1,6 +1,6 @@
 @font-face {
     font-family: eva;
-    src: url(EVA.TTF);
+    src: url(../fonts/EVA.TTF);
 }
 
 html,
@@ -46,7 +46,7 @@ ul {
     position: absolute;
     background: #34495E;
     cursor: pointer;
-    background-image: url("microphone.svg");
+    background-image: url("../images/microphone.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: 5px;
@@ -64,7 +64,7 @@ ul {
     margin-top: 41px;
     background: #34495E;
     cursor: pointer;
-    background-image: url("full-screen.svg");
+    background-image: url("../images/full-screen.svg");
     background-repeat: no-repeat;
     background-position-y: 10px;
     background-position-x: 6px;
