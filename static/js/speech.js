@@ -1,3 +1,7 @@
+"use strict";
+
+var scriptsModule = require('./scripts');
+
 $(document).ready(function() {
     console.log("speech js loaded");
 
