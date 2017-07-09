@@ -23,7 +23,7 @@ $(document).ready(function() {
             });
             return scriptsObj;
         };
+        console.log(scriptsModule);
     }());
     module.exports = scriptsModule;
 });
-console.log(scriptsModule);
