@@ -1,5 +1,7 @@
 "use strict";
 
+// create module speech
+
 var scriptsModule = require('./scripts');
 console.log(scriptsModule);
 //console.log(scriptsModule.activateModal());

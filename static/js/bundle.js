@@ -1,10 +1,42 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-$(document).ready(function() {
-    console.log('scripts.js loaded');
-    var scriptsModule = (function() {
-        var scriptsObj = {};
+'use strict';
 
-        scriptsObj.activateModal = function() {
+var scriptsModule = require('./scripts');
+var speechModule = require('./speech');
+},{"./scripts":2,"./speech":3}],2:[function(require,module,exports){
+
+
+    // console.log('scripts.js loaded');
+    // var scriptsModule = (function() {
+    //     var scriptsObj = {};
+
+    //     scriptsObj.activateModal = function() {
+    //         var original_ele = document.getElementsByClassName('output-container')[0];
+
+    //         $("#modal-btn").click(function(){
+    //             var cln = original_ele.cloneNode(true);
+    //             var modalEl = cln;
+    //             modalEl.style.width = '600px';
+    //             modalEl.style.height = 'auto';
+    //             modalEl.style.margin = '100px auto';
+    //             modalEl.style.padding = '15px';
+    //             modalEl.style.background = 'white';
+    //             modalEl.style.borderradius = '5px;';
+
+    //             modalEl.style.backgroundColor = '#fff';
+
+    //             // show modal
+    //             mui.overlay('on', modalEl);
+    //         });
+    //         scriptsObj.activateModal();
+    //         return scriptsObj;
+    //     };
+    //     console.log(scriptsModule);
+    // }());
+    // module.exports = scriptsModule;
+
+    (function(module) {
+        activateModal = function() {
             var original_ele = document.getElementsByClassName('output-container')[0];
 
             $("#modal-btn").click(function(){
@@ -21,15 +53,16 @@ $(document).ready(function() {
 
                 // show modal
                 mui.overlay('on', modalEl);
-            });
-            return scriptsObj;
-        };
-        console.log(scriptsModule);
-    }());
-    module.exports = scriptsModule;
-});
-},{}],2:[function(require,module,exports){
+            })
+    };
+
+    activateModal();
+    })();
+    
+},{}],3:[function(require,module,exports){
 "use strict";
+
+// create module speech
 
 var scriptsModule = require('./scripts');
 console.log(scriptsModule);
@@ -175,4 +208,4 @@ $(document).ready(function() {
         }
     }
 });
-},{"./scripts":1}]},{},[2]);
+},{"./scripts":2}]},{},[1]);
