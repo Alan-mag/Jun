@@ -40,6 +40,20 @@
                 </div>
                 <input class="mui-btn mui-btn--primary submit-btn" type="submit" value="submit">
             </form>
+            {% if data_return is undefined %}
+                <div id="tutorial">
+                    <h4>Search Jun</h4>
+                    <button id="examples-btn" class="mui-btn mui-btn--flat mui-btn--small mui-btn--primary">Examples</button>
+                    <ul id="examples-list">
+                        <li>Abraham Lincoln<li>
+                        <li>Myoglobin<li>
+                        <li>Derivative of x^4 cos x<li>
+                        <li>Eggs<li>
+                        <li>Lion and Cheetah<li>
+                        <li>Ben and Jerry</li>    
+                    </ul>
+                </div>
+            {% endif %}
             <div class="output-container">
                 {% if data_return == "true" %}
                     <ul>
@@ -97,6 +111,17 @@
     <script src="{{ url_for('static', filename='../static/vendor/js/mui.min.js') }}"></script>
     <!--<script src="{{ url_for('static', filename='../static/js/scripts.js') }}"></script>-->
     <script src="{{ url_for('static', filename='../static/js/bundle.js') }}"></script>
+    <script>
+        $("#examples-btn").click(function() {
+            if ( $( "#examples-list" ).is( ":hidden" ) ) {
+                // $( "#examples-list" ).css( "display", "inline" );
+                $( "#examples-list" ).slideDown( "slow" );
+            } else {
+                // $( "#examples-list" ).hide();
+                $( "#examples-list" ).slideUp( "slow" );
+            }
+        });
+    </script>
     <script>
         activateModal = function() {
             var original_ele = document.getElementsByClassName('output-container')[0];

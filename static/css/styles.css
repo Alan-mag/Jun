@@ -120,6 +120,28 @@ ul {
     z-index: 999;
 }
 
+#tutorial {
+    text-align: center;
+    padding: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background: rgb(247, 245, 245);
+    border: 2px solid rgba(96, 125, 139, 0.32);
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+}
+
+#examples-btn {
+    color: #607d8b;
+}
+
+#examples-list {
+    display:none;
+    text-align: left;
+}
+
 .mui-textfield>input {
     margin-left: 5px;
 }
