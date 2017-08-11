@@ -35,7 +35,7 @@ def send():
 
         # returns true is there is valid data found
         data_return = root.attrib.get('success')
-        print data_return
+        print data_return;
 
         for pod in root:
             title = pod.get('title')
