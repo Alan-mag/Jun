@@ -1,4 +1,5 @@
 import xml.etree.ElementTree as ET
+import imp
 from imp import reload
 import logging
 import sys
