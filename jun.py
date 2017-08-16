@@ -35,7 +35,7 @@ def send():
 
         # returns true is there is valid data found
         data_return = root.attrib.get('success')
-        print data_return
+        print (data_return)
 
         for pod in root:
             title = pod.get('title')
@@ -56,10 +56,10 @@ def send():
             pods.append(g)
             #print g
         for pod in pods:
-            print pod.title
+            print (pod.title)
             for element in pod.podsubpod:
-                print element
-            print "-------------------------"
+                print (element)
+            print ("-------------------------")
     return render_template('/index.html', result_xml=result_xml,
                            data_return=data_return, title="Jun", pods=pods, sent=sent)
 
