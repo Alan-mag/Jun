@@ -14,12 +14,10 @@ from subpod import Subpod
 app = Flask(__name__)
 imp.reload(sys)
 
-sys.setdefaultencoding('utf8')
-
 # declare global variables
 sent = False
 
-@app.route("/", methods=['GET'])
+@app.route("/")
 def main():
     return render_template('/index.html', title="Jun")
 
