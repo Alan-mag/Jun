@@ -1,9 +1,9 @@
-$(document).ready(function() {
-    console.log('scripts.js loaded');
-    var scriptsModule = (function() {
-        var scriptsObj = {};
+"use strict";
 
-        scriptsObj.activateModal = function() {
+(function(module) {
+    var pageScripts = {};
+    
+        pageScripts.activateModal = function() {
             var original_ele = document.getElementsByClassName('output-container')[0];
 
             $("#modal-btn").click(function(){
@@ -21,9 +21,20 @@ $(document).ready(function() {
                 // show modal
                 mui.overlay('on', modalEl);
             });
-            return scriptsObj;
         };
-        console.log(scriptsModule);
-    }());
-    module.exports = scriptsModule;
-});
+
+        $("#examples-btn").click(function() {
+            if ( $( "#examples-list" ).is( ":hidden" ) ) {
+                // $( "#examples-list" ).css( "display", "inline" );
+                $( "#examples-list" ).slideDown( "slow" );
+            } else {
+                // $( "#examples-list" ).hide();
+                $( "#examples-list" ).slideUp( "slow" );
+            }
+        });
+    
+    
+
+    //module.pageScripts = pageScripts;
+    module.pageScripts = pageScripts;
+})(window);

@@ -107,41 +107,10 @@
     </script>
     <script src="{{ url_for('static', filename='../static/vendor/js/particle-network.min.js') }}"></script>
     <script src="{{ url_for('static', filename='../static/js/particle-network-run.js') }}"></script>
-    <!--<script src="{{ url_for('static', filename='../static/js/speech.js') }}"></script>-->
     <script src="{{ url_for('static', filename='../static/vendor/js/mui.min.js') }}"></script>
-    <!--<script src="{{ url_for('static', filename='../static/js/scripts.js') }}"></script>-->
-    <script src="{{ url_for('static', filename='../static/js/bundle.js') }}"></script>
-    <script>
-        $("#examples-btn").click(function() {
-            if ( $( "#examples-list" ).is( ":hidden" ) ) {
-                // $( "#examples-list" ).css( "display", "inline" );
-                $( "#examples-list" ).slideDown( "slow" );
-            } else {
-                // $( "#examples-list" ).hide();
-                $( "#examples-list" ).slideUp( "slow" );
-            }
-        });
-    </script>
-    <script>
-        activateModal = function() {
-            var original_ele = document.getElementsByClassName('output-container')[0];
-
-            $("#modal-btn").click(function(){
-                var cln = original_ele.cloneNode(true);
-                var modalEl = cln;
-                modalEl.style.width = '600px';
-                modalEl.style.height = 'auto';
-                modalEl.style.margin = '100px auto';
-                modalEl.style.padding = '15px';
-                modalEl.style.background = 'white';
-                modalEl.style.borderradius = '5px;';
-
-                modalEl.style.backgroundColor = '#fff';
-
-                // show modal
-                mui.overlay('on', modalEl);
-            });
-        }
-    </script>
+    <script src="{{ url_for('static', filename='../static/js/scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='../static/js/main.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='../static/js/bundle.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='../static/js/speech.js') }}"></script>
 </body>
 </html>
