@@ -1,23 +1,20 @@
 import xml.etree.ElementTree as ET
-import imp
-from imp import reload
 import logging
 import sys
 from flask import Flask, render_template, request
 import requests
-
 
 # import pod and subpod classes
 from pod import Pod
 from subpod import Subpod
 
 app = Flask(__name__)
-imp.reload(sys)
+reload(sys)  
 
-sys.setdefaultencoding('utf8')
+sys.setdefaultencoding('utf8') 
 
 # declare global variables
-sent = False
+sent = False;
 
 @app.route("/")
 def main():
