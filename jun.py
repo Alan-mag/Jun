@@ -19,7 +19,7 @@ sys.setdefaultencoding('utf8')
 # declare global variables
 sent = False
 
-@app.route("/")
+@app.route("/", methods=['GET'])
 def main():
     return render_template('/index.html', title="Jun")
 
