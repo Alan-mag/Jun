@@ -17,20 +17,16 @@
     } else {
       console.log("speech recognition function");
       var grammar =
-        "#JSGF V1.0; grammar words; public <commands> = on-screen | home screen | june search ;";
+        "#JSGF V1.0; grammar words; public <commands> = on screen | home screen | june search ;";
       var recognition = new webkitSpeechRecognition();
 
       // grammar stuff
       var speechRecognitionList = new webkitSpeechGrammarList();
       speechRecognitionList.addFromString(grammar, 1);
       recognition.grammars = speechRecognitionList;
-      //console.log(speechRecognitionList[0].src);
 
       recognition.continuous = true;
-      //console.log(recognition.continuous);
       recognition.interimResults = true;
-
-      //console.log(document.getElementById("sent").title);
 
       // On Start
       recognition.onstart = function(event) {
@@ -71,9 +67,6 @@
         var command = "";
         var returned_speech = event.results[0][0].transcript;
         console.log(returned_speech + " RETURNED SPEECH");
-
-        // auto update input file not working
-        // document.getElementById('form-input').value += returned_speech;
 
         if (
           returned_speech == "on-screen" ||
